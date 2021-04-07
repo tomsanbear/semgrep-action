@@ -146,3 +146,4 @@ Semgrep-action determines new issues by only [scanning modified files](https://g
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
+
