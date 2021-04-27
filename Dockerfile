@@ -20,6 +20,8 @@ RUN apk add --no-cache --virtual=.build-deps build-base cargo libffi-dev openssl
     apk del .build-deps &&\
     rm -rf /root/.cache/* /root/.cargo/* /tmp/* &&\
     find / \( -name '*.pyc' -o -path '*/__pycache__*' \) -delete
+    
+RUN apk add --no-cache git-lfs
 
 COPY ./src/semgrep_agent /app/src/semgrep_agent
 RUN poetry install --no-dev &&\
