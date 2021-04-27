@@ -19,6 +19,8 @@ RUN apk add --no-cache --virtual=.build-deps build-base libffi-dev openssl-dev &
     poetry install --no-dev --no-root &&\
     apk del .build-deps &&\
     rm -rf /root/.cache/* /tmp/*
+    
+RUN apk add --no-cache git-lfs
 
 COPY ./src/semgrep_agent /app/src/semgrep_agent
 RUN poetry install --no-dev
